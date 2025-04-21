@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juntos 💜🩷</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Música -->
+    <audio autoplay loop>
+        <source src="vagalumes.mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <header>
+        <h1>Nosso Site 💜🩷</h1>
+        <p>Tempo juntos: <span id="tempo-juntos"></span></p>
+    </header>
+
+    <!-- Galeria de Fotos -->
+    <section class="galeria">
+        <h2>Nosso álbum de fotos</h2>
+        <img src="fotos/foto1.jpg" alt="Imagem 1">
+        <img src="fotos/foto2.jpg" alt="Imagem 2">
+    </section>
+
+    <!-- Carta -->
+    <section class="carta">
+        <h2>A carta do meu coração</h2>
+        <p>Meu amor, você é a razão do meu sorriso todos os dias. Te amo mais do que palavras podem expressar!</p>
+    </section>
+
+    <script>
+        const tempoJuntosElement = document.getElementById('tempo-juntos');
+        const dataInicio = new Date('2024-12-01'); // data que vocês começaram a namorar
+
+        function atualizarTempoJuntos() {
+            const agora = new Date();
+            const diff = agora - dataInicio;
+            const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+            tempoJuntosElement.textContent = `${dias} dias`;
+        }
+        setInterval(atualizarTempoJuntos, 1000);
+        atualizarTempoJuntos();
+    </script>
+
+</body>
+</html>
