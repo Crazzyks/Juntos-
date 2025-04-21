@@ -11,7 +11,7 @@
     <!-- Música -->
     <audio autoplay loop>
         <source src="vagalumes.mp3" type="audio/mp3">
-        Seu navegador não suporta o elemento de áudio.
+        Seu navegador não suporta o áudio.
     </audio>
 
     <header>
@@ -29,12 +29,17 @@
     <!-- Carta -->
     <section class="carta">
         <h2>A carta do meu coração</h2>
-        <p>Meu amor, você é a razão do meu sorriso todos os dias. Te amo mais do que palavras podem expressar!</p>
+        <p>
+            Meu amor, cada dia ao seu lado é um presente que a vida me deu. <br>
+            Obrigado por me fazer tão feliz, por ser tão incrível, e por me amar do jeitinho que eu sou. <br>
+            Que venham muitos e muitos dias juntos. Te amo pra sempre! 💜
+        </p>
     </section>
 
+    <!-- Script do Cronômetro -->
     <script>
         const tempoJuntosElement = document.getElementById('tempo-juntos');
-        const dataInicio = new Date('2024-12-01'); // data que vocês começaram a namorar
+        const dataInicio = new Date('2024-12-01');
 
         function atualizarTempoJuntos() {
             const agora = new Date();
@@ -42,6 +47,7 @@
             const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
             tempoJuntosElement.textContent = `${dias} dias`;
         }
+
         setInterval(atualizarTempoJuntos, 1000);
         atualizarTempoJuntos();
     </script>
