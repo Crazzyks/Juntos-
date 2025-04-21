@@ -1,7 +1,7 @@
-/* Estilo básico do site */
+/* Estilo geral */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffe6f0;
     color: #333;
     margin: 0;
     padding: 0;
@@ -9,9 +9,10 @@ body {
 }
 
 header {
-    background-color: #ffb6c1;
-    padding: 20px;
-    color: #fff;
+    background-color: #ff69b4;
+    color: white;
+    padding: 30px 10px;
+    border-bottom: 4px solid #e75480;
 }
 
 header h1 {
@@ -21,33 +22,59 @@ header h1 {
 
 header p {
     font-size: 1.2em;
+    margin-top: 10px;
 }
 
+/* Galeria */
 .galeria {
-    margin-top: 30px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
 .galeria h2 {
-    font-size: 1.5em;
+    font-size: 1.6em;
+    margin-bottom: 20px;
 }
 
 .galeria img {
-    width: 100%;
+    width: 90%;
     max-width: 350px;
-    margin: 10px;
-    border-radius: 10px;
+    margin: 10px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: block;
 }
 
+/* Carta */
 .carta {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    margin: 30px 20px;
+    border-radius: 15px;
     font-size: 1.2em;
     line-height: 1.6;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
+/* Música oculta */
 audio {
-    display: none; /* Esconde o player de áudio */
+    display: none;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .galeria img {
+        max-width: 90%;
+    }
+
+    .carta {
+        font-size: 1em;
+    }
 }
